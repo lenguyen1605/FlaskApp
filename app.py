@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 @app.route('/number-cats')
 def main():
+    urls = []
     number = request.args.get('number', type=int)
     directory = "static"
 
@@ -17,7 +18,7 @@ def main():
 
     if not os.path.exists(path):
         os.mkdir(path)
-    urls = []
+    
     for i in range(number):
         location = os.path.join(path, 'cat' + str(i))
 
