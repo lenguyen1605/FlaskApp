@@ -28,7 +28,7 @@ def main():
         urls.append(url_for('static', filename='cat' + str(i)))
         
 
-    return tuple(urls)
+    return str(tuple(urls))
 
 
 if __name__ == "__main__":
