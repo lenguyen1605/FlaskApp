@@ -10,7 +10,7 @@ app = Flask('hi')
 def main():
     urls = []
     number = request.args.get('number', type=int)
-    for i in range(2):
+    for i in range(number):
         urls.append(url_for('static', filename='dog'+str(i)+'.jpg'))
     return str(urls)
 
